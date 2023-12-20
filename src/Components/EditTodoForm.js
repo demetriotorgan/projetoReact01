@@ -13,13 +13,14 @@ function EditTodoForm({editTodo, task}){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form className='TodoForm' onSubmit={handleSubmit}>
             <input 
+            className='todo-input'
             value={value}
             type="text" 
             placeholder="Editar Tarefa"
             onChange={(e)=>setValue(e.target.value)} />
-            <button type="submit">Editar</button>
+            <button className='todo-btn' type="submit">Editar</button>
         </form>
     )
 }

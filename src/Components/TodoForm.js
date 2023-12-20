@@ -13,13 +13,14 @@ function TodoForm({addTodo}){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form className='TodoForm' onSubmit={handleSubmit}>
             <input 
             value={value}
             type="text" 
+            className='todo-input'
             placeholder="Tarefas a fazer"
             onChange={(e)=>setValue(e.target.value)} />
-            <button type="submit">Adicionar</button>
+            <button className='todo-btn' type="submit">Adicionar</button>
         </form>
     )
 }

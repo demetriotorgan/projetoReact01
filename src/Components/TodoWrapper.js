@@ -38,14 +38,14 @@ function TodoWrapper(){
     }
 
     return(
-        <>
+        <div className="TodoWrapper">
         <h1>Coisas para fazer!</h1>
         <TodoForm addTodo={addTodo} />
 
         {/* Renderizando os todos */}
         {todos.map((todo,index)=>(
             todo.isEditing ? (
-                <EditTodoForm editTodo={editTask} task={todo} />
+                <EditTodoForm editTodo={editTask} task={todo} key={index}/>
             ) : (
                 <Todo 
                 task={todo} 
@@ -57,7 +57,7 @@ function TodoWrapper(){
             )
                 
         ))}        
-        </>
+        </div>
     )
 }
 
